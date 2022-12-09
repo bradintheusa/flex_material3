@@ -1,6 +1,8 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flex_material3/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 void main() => runApp(const DemoApp());
 
 class DemoApp extends StatefulWidget {
@@ -26,14 +28,19 @@ class _DemoAppState extends State<DemoApp> {
      // Use a predefined FlexThemeData.light() theme for the light theme.
      theme: FlexThemeData.light(
        colors:  myFlexScheme.light,
-       // Use very subtly themed app bar elevation in light mode.
+       fontFamily: GoogleFonts.roboto().fontFamily,
        appBarElevation: 0.5,
+      //  useMaterial3: true,
+       useMaterial3ErrorColors : true,
+       textTheme: TextTheme()
      ),
      // Same definition for the dark theme, but using FlexThemeData.dark().
      darkTheme: FlexThemeData.dark(
        colors:  myFlexScheme.dark,
-       // Use a bit more themed elevated app bar in dark mode.
+       fontFamily: GoogleFonts.roboto().fontFamily,
        appBarElevation: 2,
+      //  useMaterial3: true,
+       useMaterial3ErrorColors : true
      ),
      // Use the above dark or light theme based on active themeMode.
      themeMode: themeMode,
