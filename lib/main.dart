@@ -9,10 +9,10 @@ class DemoApp extends StatefulWidget {
  const DemoApp({Key? key}) : super(key: key);
 
  @override
- _DemoAppState createState() => _DemoAppState();
+ DemoAppState createState() => DemoAppState();
 }
 
-class _DemoAppState extends State<DemoApp> {
+class DemoAppState extends State<DemoApp> {
  // Used to select if we use the dark or light theme, start with system mode.
  ThemeMode themeMode = ThemeMode.system;
 
@@ -20,7 +20,7 @@ class _DemoAppState extends State<DemoApp> {
  Widget build(BuildContext context) {
    // Select the predefined FlexScheme color scheme to use. Modify the
    // used FlexScheme enum value below to try other pre-made color schemes.
-   const FlexScheme usedScheme = FlexScheme.mandyRed;
+  //  const FlexScheme usedScheme = FlexScheme.mandyRed;
 
    return MaterialApp(
      debugShowCheckedModeBanner: false,
@@ -32,7 +32,7 @@ class _DemoAppState extends State<DemoApp> {
        appBarElevation: 0.5,
       //  useMaterial3: true,
        useMaterial3ErrorColors : true,
-       textTheme: TextTheme()
+       textTheme: const TextTheme()
      ),
      // Same definition for the dark theme, but using FlexThemeData.dark().
      darkTheme: FlexThemeData.dark(
@@ -44,7 +44,7 @@ class _DemoAppState extends State<DemoApp> {
      ),
      // Use the above dark or light theme based on active themeMode.
      themeMode: themeMode,
-     home: MyHomePage(
+     home: const MyHomePage(
      ),
    );
  }
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("widget.title"),
+        title: const Text("widget.title"),
       ),
       body: Center(
         child: Column(
