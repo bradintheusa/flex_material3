@@ -1,3 +1,3 @@
 # flex_material3
 
-An experiment with color themees
+An experiment with color themes
